@@ -31,9 +31,9 @@ public class HttpResponse {
         setHeader("Content-Type", contentType);
     }
 
-    public void send(String body) throws IOException {
+    public <T> void send(T body) throws IOException {
 
-        byte[] bodyBytes = body.getBytes(StandardCharsets.UTF_8);
+        byte[] bodyBytes = String.valueOf(body).getBytes(StandardCharsets.UTF_8);
 
         StringBuilder responseHeaders = new StringBuilder();
 

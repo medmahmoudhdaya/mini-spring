@@ -25,6 +25,7 @@ public class Dispatcher {
         Object handler = handlerMapping.getHandler(request);
 
         if (handler == null) {
+            response.setStatus(404);
             response.send("404 - Route not found");
             return;
         }

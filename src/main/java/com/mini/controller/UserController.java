@@ -5,6 +5,8 @@ import com.mini.annotation.PostMapping;
 import com.mini.annotation.RestController;
 import com.mini.service.UserService;
 
+import java.util.List;
+
 @RestController
 public class UserController {
 
@@ -15,7 +17,7 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public String getUsers() {
+    public List<String> getUsers() {
         return userService.getUsers();
     }
 

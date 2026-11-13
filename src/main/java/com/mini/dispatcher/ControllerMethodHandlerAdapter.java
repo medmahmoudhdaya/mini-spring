@@ -29,7 +29,7 @@ public class ControllerMethodHandlerAdapter implements HandlerAdapter {
                     controllerHandler.getController()
             );
 
-            response.send(String.valueOf(result));
+            response.send(result);
 
         } catch (IllegalAccessException | InvocationTargetException exception) {
             throw new IOException("Failed to invoke controller method", exception);
